@@ -14,7 +14,10 @@ app.use(express.json());
 //   methods:["GET","POST"],
 //   credentials:true,
 // }));
-app.use(cors());
+app.use(cors({
+  methods:["GET","POST"],
+  credentials:true,
+}));
 app.use(cookieParser())
 
 mongoose.connect("mongodb+srv://sima:sima@cluster0.yojpppf.mongodb.net/?retryWrites=true&w=majority");
